@@ -1,10 +1,10 @@
 console.log('Calcolo prezzo del biglietto')
 
 let inputName = document.getElementById ('name')
-let inputKm = document.getElementById('km');
+let inputDistance = document.getElementById('km');
 let inputAge= document.getElementById('age')
 
-let price= inputKm * 0.21
+let price= inputDistance * 0.21
 let underage = price* 0.2
 let overage = price * 0.4
 
@@ -18,11 +18,11 @@ const outputPrice=document.getElementById('price-pass')
 const pricePerKilometer = 0.21;
 
 btnGenerate.addEventListener('click', function() {
-    const distance = parseFloat(inputKm.value);
-	const age = inputAge.value;
+	const distance = parseFloat(inputDistance.value);
+    const age = inputAge.value;
 
-    if(inputName.value != '' && inputAge.value != '' && inputAge.value!='seleziona' ){
-        const baseprice= pricePerKilometer * distance;
+    if(inputName.value != '' && !isNaN(distance) && inputAge.value != '' && inputAge.value!='seleziona' ){
+        const price = pricePerKilometer * distance;
         let discountRate;
 
         switch (age){

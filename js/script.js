@@ -8,8 +8,8 @@ let price= inputKm * 0.21
 let underage = price* 0.2
 let overage = price * 0.4
 
-const btnGenerate=document.querySelector('confirm')
-const btnReset=document.querySelector('delete')
+const btnGenerate=document.querySelector('.confirm')
+const btnReset=document.querySelector('.delete')
 const eleTicket = document.querySelector('.ticket')
 
 const outputName=document.getElementById('name-pass')
@@ -17,7 +17,7 @@ const outputPrice=document.getElementById('price-pass')
 
 const pricePerKilometer = 0.21;
 
-conferme.addEventListener('click', function() {
+btnGenerate.addEventListener('click', function() {
     const distance = parseFloat(inputKm.value);
 	const age = inputAge.value;
 
@@ -52,7 +52,7 @@ conferme.addEventListener('click', function() {
 });
 console.log('nome', name, 'km', distance, 'età', age)
 
-discard.addEventListener('click', function () {
+btnReset.addEventListener('click', function () {
 	outputName.innerHTML = '';
 	outputPrice.innerHTML = '';
 	eleTicket.classList.add('hidden');

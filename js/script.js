@@ -16,6 +16,7 @@ const outputName=document.getElementById('name-pass')
 const outputPrice=document.getElementById('price-pass')
 
 const pricePerKilometer = 0.21;
+let distance
 
 btnGenerate.addEventListener('click', function() {
 	const distance = parseFloat(inputDistance.value);
@@ -55,5 +56,5 @@ console.log('nome', name, 'km', distance, 'età', age)
 btnReset.addEventListener('click', function () {
 	outputName.innerHTML = '';
 	outputPrice.innerHTML = '';
-	eleTicket.classList.add('hidden');
+	eleTicket.classList.add('hide');
 });
